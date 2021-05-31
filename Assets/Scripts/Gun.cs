@@ -45,8 +45,8 @@ public class Gun : MonoBehaviour
     } 
     private void Fire()
     {
-        var bullet = Instantiate(_bullet, _pointFire.position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody>().AddForce(_pointFire.forward * _forse, ForceMode.Impulse);
+        var bullet = Instantiate(_bullet, _pointFire.position, Quaternion.Euler(90f -12f, 0f, 0f));
+        bullet.GetComponent<Rigidbody>().velocity = _pointFire.forward * _forse;
     }
     private void StopFire()
     {

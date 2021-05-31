@@ -17,7 +17,7 @@ public class MotherSpider : MonoBehaviour, ISpider
         if (_health <= 0) return;
         _health-=2;
         _uiManager.ScoreChange();
-        _bone.DOPunchScale(new Vector3(0.05f, 0.05f, 0.05f), 0.02f, 1, 1f);
+        _bone.DOPunchScale(new Vector3(0.05f, 0.05f, 0.05f), 0.2f, 1, 0.2f);
      
         if (_health <= 0)
         {
