@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 63977828605263110, guid: f5d5f2baa9d387043ad5e5c5090af003, type: 3}
   _pointFire: {fileID: 2597444379314228871}
-  _forse: 40
+  _forse: 30
   refireRate: 0.2
 --- !u!1 &5010645991592904566
 GameObject:

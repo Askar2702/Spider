@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 public class MotherSpider : MonoBehaviour, ISpider
 {
-    private int _health = 250;
+    private int _health = 100;
     private UiManager _uiManager;
     [SerializeField] private Transform _bone;
     [SerializeField] private Animator _animator;
@@ -15,9 +15,9 @@ public class MotherSpider : MonoBehaviour, ISpider
     public void TakeDamage()
     {
         if (_health <= 0) return;
-        _health-=2;
+        _health-=5;
         _uiManager.ScoreChange();
-        _bone.DOPunchScale(new Vector3(0.05f, 0.05f, 0.05f), 0.2f, 1, 0.2f);
+        _bone.DOPunchScale(new Vector3(0.03f, 0.03f, 0.03f), 0.2f, 1, 0.02f);
      
         if (_health <= 0)
         {
@@ -25,7 +25,6 @@ public class MotherSpider : MonoBehaviour, ISpider
             GetComponent<Rigidbody>().mass = 50; 
             _animator.SetBool("IsDead", true);
             _bone.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-           // Destroy(gameObject, 1.5f);
         }
     }
 }
